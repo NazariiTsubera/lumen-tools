@@ -1,17 +1,25 @@
 # Lumen Tools
 
-A lightweight static landing page inspired by the structure of Synthiq, with
-new branding and original copy.
+A Next.js, TypeScript, and Tailwind landing page inspired by the structure of
+Synthiq, with new branding and original copy.
 
-## Files
+## Tech Stack
 
-- `index.html` contains the page markup.
-- `styles.css` contains all styling.
+- Next.js App Router
+- TypeScript
+- Tailwind CSS
 
 ## Run locally
 
-Open `index.html` in a browser, or serve the folder with any static file server:
+```sh
+npm install
+npm run dev
+```
+
+Open `http://localhost:3000`.
+
+## Build
 
 ```sh
-python3 -m http.server 8080
+npm run build
 ```
