@@ -1,16 +1,27 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Geist, Geist_Mono, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
+const geist = Geist({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-geist",
+});
+
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  variable: "--font-geist-mono",
+});
+
+const sourceSerif = Source_Serif_4({
+  subsets: ["latin"],
+  variable: "--font-serif",
+  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
-  title: "Lumen Tools - Refined browser utilities",
+  title: "Lumen Tools — Focused browser utilities",
   description:
-    "Lumen Tools builds refined browser utilities for students, makers, and analysts who need fast, focused workflows.",
+    "Small, sharp browser tools that turn specific, annoying workflows into fast results. Join the early access list.",
 };
 
 export default function RootLayout({
@@ -20,7 +31,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} font-sans antialiased`}>
+      <body
+        className={`${geist.variable} ${geistMono.variable} ${sourceSerif.variable}`}
+      >
         {children}
       </body>
     </html>
