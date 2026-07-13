@@ -58,7 +58,7 @@ const navLinks = [
 export default function Home() {
   return (
     <InquiryProvider>
-    <div className="relative overflow-x-hidden">
+    <div className="relative overflow-x-clip">
       {/* NAV */}
       <header
         className="sticky top-0 z-40 border-b border-ink/[0.07] backdrop-blur-[12px]"
